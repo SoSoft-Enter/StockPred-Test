@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">StockPred</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="predict_fragmen">Predict Fragmen</string>
+
+    <string-array name="stock_code">
+        <item>BBRI</item>
+        <item>BBCA</item>
+        <item>BMRI</item>
+        <item>TLKM</item>
+        <item>UNVR</item>
+        <item>GGRM</item>
+        <item>ANTM</item>
+        <item>ASII</item>
+        <item>HEXA</item>
+        <item>ICBP</item>
+        <item>SMGR</item>
+        <item>PGAS</item>
+        <item>MEGA</item>
+        <item>KLBF</item>
+        <item>CPIN</item>
+        <item>EXCL</item>
+        <item>INDF</item>
+        <item>LPKR</item>
+        <item>WIKA</item>
+        <item>JSMR</item>
+    </string-array>
+
+    <string-array name="stock_name">
+        <item>Bank Rakyat Indonesia</item>
+        <item>Bank Central Asia</item>
+        <item>Bank Mandiri</item>
+        <item>Telkom Indonesia</item>
+        <item>Unilever Indonesia</item>
+        <item>Gudang Garam</item>
+        <item>Antam</item>
+        <item>Astra International</item>
+        <item>Hexindo Adiperkasa</item>
+        <item>Indofood CBP Sukses Makmur</item>
+        <item>Semen Gresik</item>
+        <item>Perusahaan Gas Negara</item>
+        <item>Bank Mega</item>
+        <item>Kalbe Farma</item>
+        <item>Charoen Pokphand Indonesia</item>
+        <item>XL Axiata</item>
+        <item>Indofood Sukses Makmur</item>
+        <item>Lippoland Kencana</item>
+        <item>Wijaya Karya</item>
+        <item>Jasa Marga</item>
+    </string-array>
+
+</resources>
