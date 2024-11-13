@@ -13,13 +13,13 @@
         android:theme="@style/Theme.StockPred"
         tools:targetApi="31">
         <activity
-            android:name=".Input.PredictInput"
+            android:name=".input.PredictInput"
             android:exported="false" />
         <activity
-            android:name=".Detail.DetailStockActivity"
+            android:name=".detail.DetailStockActivity"
             android:exported="false" />
         <activity
-            android:name=".Detail.DetailActivity"
+            android:name=".detail.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
