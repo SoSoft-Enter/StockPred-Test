@@ -1,4 +1,4 @@
-package com.dicoding.stockpred.Input
+package com.dicoding.stockpred.input
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
