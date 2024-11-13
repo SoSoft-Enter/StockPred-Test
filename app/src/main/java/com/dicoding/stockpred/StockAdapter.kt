@@ -7,7 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StockAdapter(private val listStock: ArrayList<Stock>): RecyclerView.Adapter<StockAdapter.ListViewHolder>() {
+class StockAdapter(
+    private val listStock: ArrayList<Stock>,
+    private val onItemClick: (Stock) -> Unit
+) : RecyclerView.Adapter<StockAdapter.ListViewHolder>() {
+
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvName: TextView = itemView.findViewById(R.id.tv_stock_name)
@@ -22,9 +26,13 @@ class StockAdapter(private val listStock: ArrayList<Stock>): RecyclerView.Adapte
     override fun getItemCount(): Int = listStock.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, description, photo) = listStock[position]
-        holder.imgPhoto.setImageResource(photo)
-        holder.tvName.text = name
-        holder.tvDescription.text = description
+        val stock = listStock[position]
+        holder.imgPhoto.setImageResource(stock.photo)
+        holder.tvName.text = stock.name
+        holder.tvDescription.text = stock.description
+
+        holder.itemView.setOnClickListener {
+            onItemClick(stock)
+        }
     }
 }
