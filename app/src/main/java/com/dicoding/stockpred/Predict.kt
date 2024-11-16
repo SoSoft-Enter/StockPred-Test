@@ -9,9 +9,6 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.dicoding.stockpred.input.PredictResult
 import com.google.android.material.textfield.TextInputLayout
-import android.content.Context
-import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
 
 class Predict : Fragment() {
 
