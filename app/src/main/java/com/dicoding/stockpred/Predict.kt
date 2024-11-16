@@ -22,7 +22,7 @@ class Predict : Fragment() {
         val view = inflater.inflate(R.layout.fragment_predict, container, false)
 
         // Set click listener for the "Input" button
-        view.findViewById<Button>(R.id.buttonInput).setOnClickListener {
+        view.findViewById<Button>(R.id.buttonPredict).setOnClickListener {
             // Mengakses TextInputEditText melalui TextInputLayout
             val input1 = view.findViewById<TextInputLayout>(R.id.textInputLayout1).editText
             val input2 = view.findViewById<TextInputLayout>(R.id.textInputLayout2).editText
