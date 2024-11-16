@@ -16,13 +16,7 @@
             android:name=".input.PredictResult"
             android:exported="false" />
         <activity
-            android:name=".input.PredictInput"
-            android:exported="false" />
-        <activity
             android:name=".detail.DetailStockActivity"
-            android:exported="false" />
-        <activity
-            android:name=".detail.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
