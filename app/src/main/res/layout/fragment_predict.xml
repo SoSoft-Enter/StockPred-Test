@@ -137,7 +137,7 @@
         android:id="@+id/buttonInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Input"
+        android:text="Predict"
         app:layout_constraintStart_toEndOf="@id/buttonClear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

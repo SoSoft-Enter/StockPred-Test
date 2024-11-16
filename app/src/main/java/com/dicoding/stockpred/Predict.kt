@@ -2,10 +2,12 @@ package com.dicoding.stockpred
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.dicoding.stockpred.input.PredictResult
 import com.google.android.material.textfield.TextInputLayout
@@ -21,9 +23,23 @@ class Predict : Fragment() {
 
         // Set click listener for the "Input" button
         view.findViewById<Button>(R.id.buttonInput).setOnClickListener {
-            // Navigasi ke PredictResultActivity saat tombol "Input" diklik
-            val intent = Intent(activity, PredictResult::class.java)
-            startActivity(intent)
+            // Mengakses TextInputEditText melalui TextInputLayout
+            val input1 = view.findViewById<TextInputLayout>(R.id.textInputLayout1).editText
+            val input2 = view.findViewById<TextInputLayout>(R.id.textInputLayout2).editText
+            val input3 = view.findViewById<TextInputLayout>(R.id.textInputLayout3).editText
+
+            // Validasi input, jika kosong tampilkan pemberitahuan
+            if (TextUtils.isEmpty(input1?.text) ||
+                TextUtils.isEmpty(input2?.text) ||
+                TextUtils.isEmpty(input3?.text)
+            ) {
+                // Tampilkan pesan pemberitahuan
+                Toast.makeText(activity, "Input terlebih dahulu", Toast.LENGTH_SHORT).show()
+            } else {
+                // Jika semua input sudah diisi, navigasi ke PredictResultActivity
+                val intent = Intent(activity, PredictResult::class.java)
+                startActivity(intent)
+            }
         }
 
         // Set click listener for the "Clear" button
@@ -41,5 +57,4 @@ class Predict : Fragment() {
 
         return view
     }
-
 }
