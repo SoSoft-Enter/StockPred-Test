@@ -3,6 +3,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="predict_fragmen">Predict Fragmen</string>
+    <string name="not_connected">You appear to be offline.</string>
+    <string name="check_connection">Kindly check your internet connection.</string>
+    <string name="no_internet">Internet Access Unavailable</string>
+    <string name="close">Close</string>
+
 
     <string-array name="stock_code">
         <item>BBRI</item>
