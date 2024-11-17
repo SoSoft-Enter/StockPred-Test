@@ -8,41 +8,35 @@ import com.dicoding.stockpred.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
-        replaceFragment(Home())
-        binding.bottomNavigationView.setOnItemSelectedListener {
 
-            when(it.itemId){
-
-                R.id.home -> replaceFragment(Home())
-                R.id.predict -> replaceFragment(Predict())
-
-                else ->{
-
-                }
-
-            }
-
-            true
-
+        // Cek koneksi internet
+        if (!networkCheck(this)) {
+            DialogUtil.showNoInternetDialog(this, layoutInflater)
         }
 
+        // Setup bottom navigation
+        replaceFragment(Home())
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> replaceFragment(Home())
+                R.id.predict -> replaceFragment(Predict())
+                else -> {}
+            }
+            true
+        }
     }
 
-    private fun replaceFragment(fragment : Fragment){
-
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
-
-
     }
-
 }
