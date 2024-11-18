@@ -1,29 +1,43 @@
 package com.dicoding.stockpred
 
-import android.app.Activity
-import android.app.AlertDialog
-import android.content.Context
+import android.app.Dialog
 import android.view.LayoutInflater
-import com.google.android.material.button.MaterialButton
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.stockpred.databinding.CustomAlertDialogBinding
 
 object DialogUtil {
 
-    fun showNoInternetDialog(context: Context, layoutInflater: LayoutInflater) {
-        val builder = AlertDialog.Builder(context)
-        val dialogView = layoutInflater.inflate(R.layout.custom_alert_dialog, null)
+    fun showNoInternetDialog(activity: AppCompatActivity, layoutInflater: LayoutInflater) {
+        val dialogBinding = CustomAlertDialogBinding.inflate(layoutInflater)
+        val dialog = Dialog(activity)
+        dialog.setContentView(dialogBinding.root)
 
-        builder.setView(dialogView)
-        val dialog = builder.create()
+        // Menonaktifkan penutupan dialog dengan mengetuk di luar
+        dialog.setCancelable(false)
 
-        val btnClose = dialogView.findViewById<MaterialButton>(R.id.btnClose)
-        btnClose.setOnClickListener {
-            dialog.dismiss() // Menutup dialog
-            if (context is Activity) {
-                context.finishAffinity() // Menutup aplikasi
+        // Mengambil referensi tombol
+        val btnRefresh = dialogBinding.btnRefresh
+        val btnClose = dialogBinding.btnClose
+
+        // Menetapkan listener untuk tombol Refresh
+        btnRefresh.setOnClickListener {
+            // Logika untuk menyegarkan koneksi
+            if (networkCheck(activity)) {
+                Toast.makeText(activity, "Koneksi berhasil!", Toast.LENGTH_SHORT).show()
+                dialog.dismiss() // Menutup dialog jika koneksi berhasil
+            } else {
+                Toast.makeText(activity, "Koneksi gagal. Coba lagi!", Toast.LENGTH_SHORT).show()
             }
         }
 
-        dialog.setCancelable(false) // Mencegah dialog ditutup dengan tombol back
+        // Menetapkan listener untuk tombol Close
+        btnClose.setOnClickListener {
+            dialog.dismiss() // Menutup dialog
+            activity.finish() // Menutup aplikasi
+        }
+
+        // Menampilkan dialog
         dialog.show()
     }
 }
