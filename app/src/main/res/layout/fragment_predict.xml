@@ -15,20 +15,29 @@
         android:layout_height="wrap_content"
         android:background="@color/primary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="StockPred"
-        app:titleTextColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp"
-        android:fitsSystemWindows="true"/> <!-- Pastikan ini tetap ada -->
+        android:fitsSystemWindows="true">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_text"
+            android:layout_gravity="center"
+            android:padding="8dp" />
+    </androidx.appcompat.widget.Toolbar>
 
     <!-- TextView dan TextInputLayout pertama -->
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Label Input 1"
+        android:text="USD/IDR Exchange Rate"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -53,7 +62,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 1" />
+            android:hint="Input USD/IDR Exchange Rate Data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextView dan TextInputLayout kedua -->
@@ -61,7 +70,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Label Input 2"
+        android:text="Bank Indonesia Interest Rate"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -86,7 +96,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 2" />
+            android:hint="Input Bank Indonesia Interest Rate Data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextView dan TextInputLayout ketiga -->
@@ -94,7 +104,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Label Input 3"
+        android:text="Indonesia Inflation Rate"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -119,7 +130,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 3" />
+            android:hint="Input Indonesia Inflation Rate Data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Tombol Clear -->
@@ -134,7 +145,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"/>
+        android:layout_marginHorizontal="16dp" />
 
     <!-- Tombol Predict -->
     <Button
@@ -148,6 +159,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"/>
+        android:layout_marginHorizontal="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
