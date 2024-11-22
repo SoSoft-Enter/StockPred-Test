@@ -31,8 +31,12 @@ class StockAdapter(
         holder.tvName.text = stock.name
         holder.tvDescription.text = stock.description
 
+        // Harga tidak ditampilkan
+        holder.itemView.findViewById<TextView>(R.id.tv_stock_price).text = "Rp ${stock.price}"
+
         holder.itemView.setOnClickListener {
             onItemClick(stock)
         }
     }
+
 }

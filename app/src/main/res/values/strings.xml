@@ -8,6 +8,10 @@
     <string name="internet_access_unavailable">Internet Access Unavailable</string>
     <string name="close">Close</string>
     <string name="refresh">Refresh</string>
+    <string name="input_usd_idr_exchange_rate_data">Input USD/IDR Exchange Rate Data</string>
+    <string name="usd_idr_exchange_rate">USD/IDR Exchange Rate</string>
+    <string name="bank_indonesia_interest_rate">Bank Indonesia Interest Rate</string>
+    <string name="input_bank_indonesia_interest_rate_data">Input Bank Indonesia Interest Rate Data</string>
 
     <string-array name="stock_code">
         <item>BBRI</item>

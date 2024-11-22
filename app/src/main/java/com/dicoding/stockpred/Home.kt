@@ -20,30 +20,31 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.rv_stock)
 
-        // Mengambil data dari strings.xml
         val stockCodes = resources.getStringArray(R.array.stock_code)
         val stockNames = resources.getStringArray(R.array.stock_name)
+        val stockPrices = resources.getStringArray(R.array.stock_prices)
 
-        // Memastikan jumlah stockCode dan stockName sama
-        if (stockCodes.size == stockNames.size) {
+        if (stockCodes.size == stockNames.size && stockCodes.size == stockPrices.size) {
             stockList = ArrayList()
             for (i in stockCodes.indices) {
-                // Menambahkan data ke list dengan foto placeholder
-                stockList.add(Stock(stockNames[i], stockCodes[i], R.drawable.placeholder_logo))
+                stockList.add(
+                    Stock(
+                        name = stockNames[i],
+                        description = stockCodes[i],
+                        photo = R.drawable.placeholder_logo,
+                        price = stockPrices[i] // Tambahkan harga saham
+                    )
+                )
             }
         }
 
-        // Set up the RecyclerView with the adapter
         stockAdapter = StockAdapter(stockList) { stock ->
-            // Panggil DetailStockActivity ketika item diklik
             val intent = Intent(activity, DetailStockActivity::class.java).apply {
-                putExtra("EXTRA_STOCK", stock) // Kirim data stock
+                putExtra("EXTRA_STOCK", stock)
             }
             startActivity(intent)
         }
@@ -53,4 +54,7 @@ class Home : Fragment() {
 
         return view
     }
+
+
+
 }

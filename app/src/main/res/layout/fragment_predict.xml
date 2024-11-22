@@ -36,7 +36,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USD/IDR Exchange Rate"
+        android:text="@string/usd_idr_exchange_rate"
         android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="16dp"
@@ -62,7 +62,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input USD/IDR Exchange Rate Data" />
+            android:hint="@string/input_usd_idr_exchange_rate_data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextView dan TextInputLayout kedua -->
@@ -70,7 +70,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bank Indonesia Interest Rate"
+        android:text="@string/bank_indonesia_interest_rate"
         android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginStart="16dp"
@@ -96,7 +96,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input Bank Indonesia Interest Rate Data" />
+            android:hint="@string/input_bank_indonesia_interest_rate_data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextView dan TextInputLayout ketiga -->

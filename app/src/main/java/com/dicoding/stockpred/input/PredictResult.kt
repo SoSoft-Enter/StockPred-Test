@@ -30,6 +30,7 @@ class PredictResult : AppCompatActivity() {
         // Load data from string arrays
         val stockCodes = resources.getStringArray(R.array.stock_code)
         val stockNames = resources.getStringArray(R.array.stock_name)
+        val stockPrices = resources.getStringArray(R.array.stock_prices)
 
         // Prepare list of Stock objects
         val stockList = ArrayList<Stock>()
@@ -39,6 +40,7 @@ class PredictResult : AppCompatActivity() {
                     name = stockNames[i],
                     description = stockCodes[i],
                     photo = R.drawable.placeholder_logo,
+                    price = stockPrices[i]
                 )
             )
         }

@@ -7,5 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class Stock(
     val name: String,
     val description: String,
-    val photo: Int
+    val photo: Int,
+    val price: String
 ) : Parcelable

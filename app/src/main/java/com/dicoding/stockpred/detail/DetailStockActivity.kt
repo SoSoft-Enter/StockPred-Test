@@ -17,6 +17,7 @@ class DetailStockActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar2)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = ""
         toolbar.setNavigationOnClickListener { onBackPressed() }
 
         val stock = intent.getParcelableExtra<Stock>("EXTRA_STOCK")
