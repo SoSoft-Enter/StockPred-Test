@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".input.PredictResult">
+    tools:context=".data.PredictResult">
 
     <!-- Toolbar with back button -->
     <androidx.appcompat.widget.Toolbar

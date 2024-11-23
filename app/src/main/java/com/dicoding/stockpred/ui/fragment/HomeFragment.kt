@@ -1,4 +1,4 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,11 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.stockpred.detail.DetailStockActivity
-import com.dicoding.stockpred.viewmodel.HomeViewModel
-import com.dicoding.stockpred.viewmodel.factory.HomeViewModelFactory
+import com.dicoding.stockpred.R
+import com.dicoding.stockpred.ui.activity.DetailStockActivity
+import com.dicoding.stockpred.ui.adapter.StockAdapter
+import com.dicoding.stockpred.ui.model.HomeViewModel
+import com.dicoding.stockpred.ui.model.factory.HomeViewModelFactory
 
-class Home : Fragment() {
+class HomeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var stockAdapter: StockAdapter<Any?>

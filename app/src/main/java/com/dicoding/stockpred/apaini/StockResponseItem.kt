@@ -1,4 +1,4 @@
-package com.dicoding.stockpred.data
+package com.dicoding.stockpred.apaini
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

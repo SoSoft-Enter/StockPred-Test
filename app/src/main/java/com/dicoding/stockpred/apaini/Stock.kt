@@ -1,4 +1,4 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.apaini
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

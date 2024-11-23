@@ -1,7 +1,8 @@
-package com.dicoding.stockpred.data
+package com.dicoding.stockpred.data.response
 
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
+import com.dicoding.stockpred.apaini.StockResponseItem
 import com.google.gson.annotations.SerializedName
 
 @Parcelize

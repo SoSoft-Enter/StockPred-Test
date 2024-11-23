@@ -1,4 +1,4 @@
-package com.dicoding.stockpred.detail
+package com.dicoding.stockpred.ui.activity
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,7 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.dicoding.stockpred.R
-import com.dicoding.stockpred.Stock
+import com.dicoding.stockpred.apaini.Stock
 
 class DetailStockActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

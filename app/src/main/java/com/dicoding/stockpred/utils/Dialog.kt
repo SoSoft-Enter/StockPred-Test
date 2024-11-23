@@ -1,4 +1,4 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.utils
 
 import android.app.Dialog
 import android.view.LayoutInflater

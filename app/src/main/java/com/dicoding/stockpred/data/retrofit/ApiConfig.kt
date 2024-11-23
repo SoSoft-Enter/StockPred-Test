@@ -1,6 +1,6 @@
 package com.dicoding.stockpred.data.retrofit
 
-import com.dicoding.stockpred.retrofit.ApiService
+import com.dicoding.stockpred.data.retrofit.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

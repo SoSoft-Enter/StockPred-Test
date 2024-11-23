@@ -1,4 +1,4 @@
-package com.dicoding.stockpred.input
+package com.dicoding.stockpred.data
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.stockpred.R
-import com.dicoding.stockpred.Stock
-import com.dicoding.stockpred.StockAdapter
+import com.dicoding.stockpred.apaini.Stock
+import com.dicoding.stockpred.ui.adapter.StockAdapter
 
 class PredictResult : AppCompatActivity() {
 

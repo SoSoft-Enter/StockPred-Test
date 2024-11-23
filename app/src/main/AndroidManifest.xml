@@ -15,16 +15,16 @@
         android:theme="@style/Theme.StockPred"
         tools:targetApi="31">
         <activity
-            android:name=".input.PredictResult"
+            android:name=".data.PredictResult"
             android:exported="false" />
         <activity
-            android:name=".detail.DetailStockActivity"
+            android:name=".ui.activity.DetailStockActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,10 +1,15 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.ui.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.dicoding.stockpred.R
 import com.dicoding.stockpred.databinding.ActivityMainBinding
+import com.dicoding.stockpred.ui.fragment.HomeFragment
+import com.dicoding.stockpred.ui.fragment.PredictFragment
+import com.dicoding.stockpred.utils.DialogUtil
+import com.dicoding.stockpred.utils.networkCheck
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,14 +36,14 @@ class MainActivity : AppCompatActivity() {
             }
         } else {
             // Default fragment
-            replaceFragment(Home(), "Home")
+            replaceFragment(HomeFragment(), "Home")
         }
 
         // Setup bottom navigation
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> replaceFragment(Home(), "Home")
-                R.id.predict -> replaceFragment(Predict(), "Predict")
+                R.id.home -> replaceFragment(HomeFragment(), "Home")
+                R.id.predict -> replaceFragment(PredictFragment(), "Predict")
                 else -> {}
             }
             true

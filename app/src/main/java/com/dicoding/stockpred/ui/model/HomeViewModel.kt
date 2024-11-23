@@ -1,10 +1,10 @@
-package com.dicoding.stockpred.viewmodel
+package com.dicoding.stockpred.ui.model
 
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.stockpred.data.StockResponseItem
+import com.dicoding.stockpred.apaini.StockResponseItem
 import com.dicoding.stockpred.data.retrofit.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback

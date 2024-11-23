@@ -1,7 +1,9 @@
+package com.dicoding.stockpred.data
+
 import android.content.Context
 import androidx.room.Room
-import com.dicoding.stockpred.room.StockDatabase
-import com.dicoding.stockpred.data.StockResponseItem
+import com.dicoding.stockpred.data.room.StockDatabase
+import com.dicoding.stockpred.apaini.StockResponseItem
 
 class StockRepository(context: Context) {
 
@@ -12,11 +14,11 @@ class StockRepository(context: Context) {
 
     private val stockDao = db.stockResponseItemDao()
 
-    suspend fun getAllStocks(): List<com.dicoding.stockpred.data.StockResponseItem> {
+    suspend fun getAllStocks(): List<StockResponseItem> {
         return stockDao.getAllStocks()
     }
 
-    suspend fun getStockByCode(code: String): com.dicoding.stockpred.data.StockResponseItem? {
+    suspend fun getStockByCode(code: String): StockResponseItem? {
         return stockDao.getStockByCode(code)
     }
 

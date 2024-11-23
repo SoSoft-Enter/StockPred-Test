@@ -1,4 +1,4 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.dicoding.stockpred.input.PredictResult
+import com.dicoding.stockpred.R
+import com.dicoding.stockpred.data.PredictResult
 import com.google.android.material.textfield.TextInputLayout
 
-class Predict : Fragment() {
+class PredictFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

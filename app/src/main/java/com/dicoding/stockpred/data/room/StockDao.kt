@@ -1,9 +1,9 @@
-package com.dicoding.stockpred.room
+package com.dicoding.stockpred.data.room
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.dicoding.stockpred.data.StockResponseItem
+import com.dicoding.stockpred.apaini.StockResponseItem
 
 @Dao
 interface StockDao {

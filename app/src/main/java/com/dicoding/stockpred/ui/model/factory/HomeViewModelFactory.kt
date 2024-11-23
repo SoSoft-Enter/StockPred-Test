@@ -1,8 +1,8 @@
-package com.dicoding.stockpred.viewmodel.factory
+package com.dicoding.stockpred.ui.model.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.stockpred.viewmodel.HomeViewModel
+import com.dicoding.stockpred.ui.model.HomeViewModel
 
 class HomeViewModelFactory : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

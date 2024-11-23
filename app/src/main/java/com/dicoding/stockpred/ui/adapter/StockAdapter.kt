@@ -1,4 +1,4 @@
-package com.dicoding.stockpred
+package com.dicoding.stockpred.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.stockpred.data.StockResponseItem
+import com.dicoding.stockpred.R
+import com.dicoding.stockpred.apaini.StockResponseItem
 
 class StockAdapter(
     private val listStock: List<StockResponseItem>, // Menggunakan StockResponseItem

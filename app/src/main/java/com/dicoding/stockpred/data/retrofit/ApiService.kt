@@ -1,9 +1,9 @@
-package com.dicoding.stockpred.retrofit
+package com.dicoding.stockpred.data.retrofit
 
-import com.dicoding.stockpred.Predict
+import com.dicoding.stockpred.ui.fragment.PredictFragment
 import com.dicoding.stockpred.PredictionResponse
-import com.dicoding.stockpred.data.StockResponseItem
-import com.dicoding.stockpred.data.StockPredictResponse
+import com.dicoding.stockpred.apaini.StockResponseItem
+import com.dicoding.stockpred.data.response.StockPredictResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -26,5 +26,5 @@ interface ApiService {
 
     // Endpoint untuk mengirimkan input untuk prediksi
     @POST("/predict")
-    fun submitPredictionInput(@Body input: Predict): Call<PredictionResponse>  // Mengirimkan input untuk prediksi, berupa PredictInput
+    fun submitPredictionInput(@Body input: PredictFragment): Call<PredictionResponse>  // Mengirimkan input untuk prediksi, berupa PredictInput
 }
