@@ -57,5 +57,9 @@ dependencies {
     implementation (libs.material.v190)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+    implementation (libs.logging.interceptor)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
 
 }
