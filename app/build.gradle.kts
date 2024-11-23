@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -61,5 +62,8 @@ dependencies {
     implementation (libs.logging.interceptor)
     implementation (libs.glide)
     annotationProcessor (libs.compiler)
+    implementation ("androidx.room:room-runtime:2.5.0")
+    ksp ("androidx.room:room-compiler:2.5.0")
+    implementation ("androidx.room:room-ktx:2.5.0")
 
 }
