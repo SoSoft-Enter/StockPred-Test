@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.stockpred.data.StockResponseItem
 
 class StockAdapter(
-    private val listStock: ArrayList<Stock>,
-    private val onItemClick: (Stock) -> Unit
+    private val listStock: List<StockResponseItem>, // Menggunakan StockResponseItem
+    private val onItemClick: (StockResponseItem) -> Unit // Mengirimkan StockResponseItem pada klik
 ) : RecyclerView.Adapter<StockAdapter.ListViewHolder>() {
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -27,16 +28,20 @@ class StockAdapter(
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val stock = listStock[position]
-        holder.imgPhoto.setImageResource(stock.photo)
+
+        // Menampilkan logo menggunakan gambar yang sesuai
+        holder.imgPhoto.setImageResource(stock.logo)
+
+        // Menampilkan nama dan deskripsi saham
         holder.tvName.text = stock.name
         holder.tvDescription.text = stock.description
 
-        // Harga tidak ditampilkan
-        holder.itemView.findViewById<TextView>(R.id.tv_stock_price).text = "Rp ${stock.price}"
+        // Tidak ada lagi bagian harga, jadi kita hapus bagian ini
+        // holder.itemView.findViewById<TextView>(R.id.tv_stock_price).text = "Rp ${stock.price}"
 
         holder.itemView.setOnClickListener {
             onItemClick(stock)
         }
     }
-
 }
+

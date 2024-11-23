@@ -1,9 +1,9 @@
 package com.dicoding.stockpred.retrofit
 
-import com.dicoding.stockpred.PredictInput
+import com.dicoding.stockpred.Predict
 import com.dicoding.stockpred.PredictionResponse
-import com.dicoding.stockpred.StockDetail
-import com.dicoding.stockpred.StockItem
+import com.dicoding.stockpred.data.StockResponseItem
+import com.dicoding.stockpred.data.StockPredictResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -12,19 +12,19 @@ import retrofit2.http.Path
 
 interface ApiService {
 
-    // Endpoint untuk mendapatkan daftar saham (Home.kt)
+    // Endpoint untuk mendapatkan daftar saham
     @GET("/stocks")
-    fun getStocks(): Call<List<StockItem>>
+    fun getStocks(): Call<List<StockResponseItem>>  // Mendapatkan daftar saham, hasilnya berupa list StockResponseItem
 
-    // Endpoint untuk mendapatkan detail saham (DetailStockActivity.kt)
+    // Endpoint untuk mendapatkan detail saham
     @GET("/stock/{code}")
-    fun getStockDetail(@Path("code") code: String): Call<StockDetail>
+    fun getStockDetail(@Path("code") code: String): Call<StockResponseItem>  // Mendapatkan detail saham berdasarkan kode saham
 
-    // Endpoint untuk mendapatkan prediksi (PredictResult.kt)
+    // Endpoint untuk mendapatkan prediksi saham
     @GET("/predictions")
-    fun getPredictions(): Call<PredictionResponse>
+    fun getPredictions(): Call<StockPredictResponse>  // Mendapatkan prediksi hasil saham, berupa StockPredictResponse
 
-    // Endpoint untuk mengirim input (Predict.kt)
+    // Endpoint untuk mengirimkan input untuk prediksi
     @POST("/predict")
-    fun submitPredictionInput(@Body input: PredictInput): Call<PredictionResponse>
+    fun submitPredictionInput(@Body input: Predict): Call<PredictionResponse>  // Mengirimkan input untuk prediksi, berupa PredictInput
 }
